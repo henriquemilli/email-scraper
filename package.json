@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "extract-emails": "^0.0.5",
+    "puppeteer": "^14.4.1"
+  }
+}

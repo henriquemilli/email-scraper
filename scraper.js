@@ -21,9 +21,7 @@ async function getUrls() {
     
     for(let i = 0; i < totalPages; i++){
         const page = await browser.newPage();
-        const query = conf.endpoint 
-        + '?' + conf.queryParam + '=' + conf.query.replaceAll(' ', '+')
-        + '&' + conf.startParam + '=' + String(i * conf.resultsPerPage + conf.resultsStart);
+        const query = conf.endpoint + conf.query;
         
         await page.goto(query, {waitUntil: 'networkidle2'})
         .then(() => {

@@ -88,7 +88,7 @@ async function getEmails(urls){
             if(typeof(mail) === 'string'){
                 let extracted = String(extractEmails(mail));
                 if(extracted !== ''){
-                    let string = extracted + ', ';
+                    let string = extracted + '\n';
                     stream.write(string);
                 }
             }
